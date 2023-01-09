@@ -1,0 +1,477 @@
+.head{
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+/*네비게이션*/
+.Nav {
+    width: 100%;
+    height: 120px; 
+    position: absolute;
+    z-index: 3;
+}
+.Nav_Top {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+.NT_right{
+    width: 130px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 20px;
+}
+.NT_login, .NT_Sign_up{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(244, 243, 242);
+}
+.NT_login{
+    border-right: 1px solid rgb(185, 185, 185);
+    padding-right: 12px;
+}
+.Nav_Bottom1 {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 60px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.NB_menu1 {
+    width: 750px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    
+}
+.NB_menu1 a{
+    margin-right: 28px;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+
+/*업데이트 이미지*/
+.Update_Img{
+    z-index: 4;
+    width: 100%;
+    height: 460px;
+}
+.UI_tabs {
+    position: relative;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.UI_tab {
+    float: left;
+    height: 480px;
+}
+
+.UI_box {
+    width: 280px;
+    height: 60px;
+    position: relative;
+    top: 401px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    /*드래그 불가*/
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 4;
+}
+
+.UI_tab [type="radio"] {
+    display: none;
+}
+
+.UI_tab .content {
+    position: absolute;
+    width: 100%;
+    height: 460px;
+    top: 0px;
+    left: -1px;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.UI_tab .content>article {
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.UI_tab [type="radio"]:checked~label {
+    background: white;
+    border-top: 1px solid white;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.UI_tab [type="radio"]:checked+label+.content {
+    z-index: 1;
+}
+
+.UI_tab [type="radio"]:checked+label+.content>article {
+    display: block;
+    transform: translateX(0);
+
+}
+
+.UI_img_1 {
+    background-image: url(two_three.jpg);
+    background-position: center;
+}
+
+.UI_img_2 {
+    background-image: url(report.jpg);
+    background-position: center;
+}
+
+.UI_img_3 {
+    background-image: url(update.jpg);
+    background-position: center;
+}
+
+.UI_img_4 {
+    background-image: url(awards.jpg);
+    background-position: center;
+}
+
+.tap_box {
+    width: 100%;
+    height: 60px;
+    border-top: 0.3px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    top: -61px;
+    z-index: 1;
+}
+
+.backgrdond_black {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    top: 400px;
+    z-index: 1;
+}
+
+.UI_BTN {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -124px;
+    z-index: 1;
+}
+
+.UI_left_btn {
+    width: 12px;
+    height: 12px;
+    z-index: 2;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    position: absolute;
+    transform: rotate(-45deg);
+    margin-right: 1050px;
+    /*드래그 불가*/
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+.UI_right_btn {
+    width: 12px;
+    height: 12px;
+    z-index: 2;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    position: absolute;
+    transform: rotate(45deg);
+    margin-left: 1150px;
+    /*드래그 불가*/
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.event_icon,
+.video_icon,
+.update_icon,
+.notice_icon {
+    width: 50px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/*업데이트 이미지 내용*/
+.video_icon,
+.notice_icon {
+    width: 38px;
+}
+
+.update_icon {
+    width: 60px;
+}
+.UI_content{
+    position: absolute;
+    top: 170px;
+    left: 230px;
+}
+.two_three{
+    top: 200px;
+}
+.UI_main{
+    width: 600px;
+    height: 100px;
+    font-size: 35px;
+    color: white;
+    font-weight: 500;
+    margin-top: 10px;
+    line-height: 45px;
+    position: relative;
+}
+.UI_sub{
+    width:600px;
+    height: 50px;
+    font-size: 15px;
+    color: rgb(214, 214, 214);
+    font-weight: bold;
+    position: absolute;
+    top: 90px;
+}
+.subname{
+    top: 140px;
+    color: white;
+}
+.TH_sub{
+    color: white;
+}
+.UP_sub{
+    top: 200px;
+}
+
+
+
+
+
+/*전체보기 메뉴*/
+.VA_popup_menu {
+    width: 100%;
+    height: 140px;
+    position: relative;
+    top: -261px;
+    z-index: 4;
+    display: none;
+}
+
+.VA_Menu {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(111, 61, 222);
+    position: relative;
+    top: 9px;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.VA_icon {
+    width: 14px;
+    height: 14px;
+    display: grid;
+    grid-template-columns: 4px 4px 4px;
+    grid-template-rows: 4px 4px 4px;
+    row-gap: 1px;
+    column-gap: 1px;
+    margin-right: 5px;
+}
+
+.VA_icon span {
+    display: inline-block;
+    background-color: white;
+}
+
+.VA_Icons {
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 370px;
+    z-index: 4;
+    left: 1500px;
+}
+.VA_box {
+    width: 310px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+[class^="VA_box_img"] {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+.VA_box_img1 {
+    background-image: url(all_menu1.jpg);
+}
+
+.VA_box_img2 {
+    background-image: url(all_menu2.jpg);
+}
+
+.VA_box_img3 {
+    background-image: url(all_menu3.jpg);
+}
+
+.VA_box_img4 {
+    background-image: url(all_menu4.jpg);
+}
+
+
+
+
+
+/*닫기 버튼*/
+.closed_btn {
+    width: 35px;
+    height: 35px;
+    background-color: rgb(111, 61, 222);
+    position: relative;
+    left: 1520px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closed_btn span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    /*드래그 불가*/
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.CB_1 {
+    transform: rotate(45deg);
+}
+
+.CB_2 {
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+/*전체보기 체크 메뉴*/
+.VAM:checked~.VA_popup_menu {
+    display: block;
+}
+
+.VAM {
+    display: none;
+}
+
+
+
+
+
+/*업데이트 이미지 카운트*/
+.count{
+    width: 50px;
+    height: 20px;
+    color: rgb(192, 192, 192);
+    position: relative;
+    top: 370px;
+    left: 360px;
+    font-size: 14px;
+}
+.count span{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*다운로드 헤드*/
+.Download_Head{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    position: relative;
+    top: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.DH_box{
+    margin-right: 50px;
+}

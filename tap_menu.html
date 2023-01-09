@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tap_menu</title>
+    <style>
+        .tabs {
+            position: relative;
+            padding: 0;
+            list-style: none;
+            min-height: 300px; /* 탭 인터페이스 전체 높이 지정 - 애니메이션에 필수 */
+            overflow: hidden; /* 탭 외곽에 위치한 나머지 탭 컨텐츠가 보이지 않도록 가림 */
+                }
+        .tab {
+            float: left;
+            padding: 10px 0;
+        }
+        .tab label { /* 탭 헤더 */
+            position: relative;
+            background: #eee;
+            padding: 8px 20px;
+            border: 1px solid #ccc;
+        }
+        .tab [type="radio"] {
+            display: none;
+        }
+        .tab .content { /* 탭 컨텐츠 영역 */
+            position: absolute;
+            background: white;
+            top: 39px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            overflow-y: auto;
+        }
+        .tab .content > article { /* 컨텐츠 영역 프레임 유지를 위해 내부에 실제 애니메이션 블록 생성 */
+            transform: translateX(-100%);
+            transition: all 0.5s ease-in-out;
+        }
+        .tab [type="radio"]:checked ~ label {
+            background: white;
+            border-bottom: 1px solid white;
+            z-index: 2; /* 선택한 탭 헤더를 앞으로 옮겨서 컨텐츠 영역 테두리에 가져지지 않도록 함 */
+        }
+        .tab [type="radio"]:checked + label + .content {
+            z-index: 1;
+        }
+        .tab [type="radio"]:checked + label + .content > article { /* 실제 컨텐츠 블록 애니메이션 */
+            display: block;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <ul class="tabs">
+        <li class="tab">
+          <!-- 첫 번째 탭에는 "checked" 속성을 추가해 활성화 시킴 -->
+          <input type="radio" id="tab-1" name="tab-group-1" checked>
+          <label for="tab-1">탭1</label>
+          <div class="content">
+            <p>컨텐츠1</p>
+          </div>
+        </li>
+        <li class="tab">
+          <input type="radio" id="tab-2" name="tab-group-1">
+          <label for="tab-2">탭2</label>
+          <div class="content">
+            <p>컨텐츠2</p>
+          </div>
+        </li>
+        <li class="tab">
+          <input type="radio" id="tab-3" name="tab-group-1">
+          <label for="tab-3">탭3</label>
+          <div class="content">
+            <p>컨텐츠3</p>
+          </div>
+        </li>
+    </ul>
+</body>
+</html>

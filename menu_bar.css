@@ -1,0 +1,292 @@
+ /*메뉴아이콘*/
+ .burger_sticks1,
+ .burger_sticks2,
+ .burger_sticks3 {
+     display: block;
+     width: 22px;
+     height: 2px;
+     background-color: white;
+     margin-bottom: 4px;
+     transition: all 0.3s;
+ }
+
+ .MI:first-child {
+     padding-top: 5px;
+ }
+
+ .MI {
+     width: 50px;
+     height: 60px;
+     background-color: rgba(0, 0, 0, 0);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     z-index: 5;
+ }
+
+ .Burger_Menu {
+     display: none;
+ }
+
+ .MI:hover .burger_sticks1 {
+     width: 15px;
+     position: relative;
+     left: 4px;
+     transform: rotate(45deg);
+     transition: 0.2s;
+     background-color: rgb(186, 186, 186);
+ }
+
+ .MI:hover .burger_sticks3 {
+     width: 15px;
+     position: relative;
+     left: 3.5px;
+     transform: rotate(-45deg);
+     transition: 0.2s;
+     background-color: rgb(186, 186, 186);
+ }
+
+ .MI:hover .burger_sticks2 {
+     width: 22px;
+     position: relative;
+     transform: rotate(180deg);
+     transition: 0.2s;
+     background-color: rgb(186, 186, 186);
+ }
+
+
+
+ /*메뉴 checked 속성*/
+ .Burger_Menu:checked~.menu {
+     left: 0px;
+     transition: 0.5s;
+ }
+ .Burger_Menu:checked~.menu_bacgroundblack{
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+    z-index: 5;
+ }
+
+/*
+ .menu_bacgroundblack{
+    width: 100%;
+    height: 2000px;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    left: 60px;
+    z-index: -1;
+ }*/
+
+ /*메뉴 내용*/
+ .menu {
+     width: 375px;
+     height: 100%;
+     overflow-y: scroll;
+     position: fixed;
+     top: 0px;
+     left: -375px;
+     transition: 0.5s;
+     z-index: 6;
+ }
+
+ .menu::-webkit-scrollbar {
+     width: 10px;
+ }
+
+ .menu div::-webkit-scrollbar-thumb {
+     height: 30%;
+     background: rgb(127, 127, 127);
+     border-radius: 10px;
+ }
+
+ .menu_scrollbar::-webkit-scrollbar-track {
+     background: rgba(255, 255, 255);
+ }
+
+ .Menu_logo {
+     width: 100%;
+     height: 50px;
+     background-color: rgb(118, 66, 239);
+ }
+
+ .ML_EXIT {
+     width: 50px;
+     height: 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .Menu_EXIT1,
+ .Menu_EXIT2 {
+     display: block;
+     width: 22px;
+     height: 2px;
+     background-color: white;
+ }
+
+ .Menu_EXIT1 {
+     position: relative;
+     top: 1px;
+     transform: rotate(45deg);
+ }
+
+ .Menu_EXIT2 {
+     position: relative;
+     bottom: 1px;
+     transform: rotate(-45deg);
+ }
+
+ [src="Menu_logo.png"] {
+     width: 95px;
+     height: 50px;
+     position: absolute;
+     top: 2px;
+     left: 135px;
+ }
+
+ .Menu_List {
+     width: 100%;
+     height: 380px;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .Menu_List li {
+     width: 340px;
+     height: 53px;
+     border-bottom: 1px solid rgb(233, 236, 239);
+     display: flex;
+     align-items: center;
+     padding-left: 10px;
+     font-family: 'Roboto', sans-serif;
+     color: rgb(82, 82, 82);
+     font-size: 13px;
+     font-weight: bold;
+     position: relative;
+     top: 1px;
+ }
+
+ .icons_new {
+     color: rgb(255, 141, 116);
+     margin-left: 5px;
+     font-weight: 600;
+ }
+
+ .Menu_btn {
+     width: 100%;
+     height: 90px;
+     background-color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+ }
+
+ .ME_BTN {
+     width: 350px;
+     height: 88px;
+     border-bottom: 1px solid rgb(233, 236, 239);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .plaync_btn,
+ .Customer_Support_btn {
+     width: 170px;
+     height: 40px;
+     border-radius: 5px;
+     border: 1px solid rgb(220, 220, 220);
+     background-color: rgb(246, 246, 246);
+     color: rgb(148, 115, 224);
+     font-weight: bold;
+     padding-left: 15px;
+ }
+
+ .plaync_btn {
+     margin-right: 8px;
+ }
+
+ .PG {
+     width: 100%;
+     height: 40px;
+     background-color: rgb(246, 246, 246);
+     display: flex;
+     align-items: center;
+     border-top: 1px solid rgb(220, 220, 220);
+     position: relative;
+     top: -1px;
+ }
+
+ .PG p {
+     margin-left: 22px;
+     font-family: 'Roboto', sans-serif;
+     font-size: 14px;
+     font-weight: 400;
+ }
+
+ .PLAYNC_game {
+     width: 100%;
+     height: 740px;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .PLAYNC_game li {
+     width: 340px;
+     height: 50px;
+     border-bottom: 1px solid rgb(233, 236, 239);
+     display: flex;
+     align-items: center;
+     padding-left: 10px;
+     font-family: 'Roboto', sans-serif;
+     color: rgb(82, 82, 82);
+     font-size: 14px;
+     font-weight: 600;
+     position: relative;
+     top: 1px;
+     justify-content: space-between;
+ }
+ .game_box {
+     width: 100px;
+     height: 30px;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+ }
+ .icon_windiow, .icon_apple, .icon_android{
+     width: 22px;
+     height: 22px;
+     margin-right: 10px;
+ }
+ .PN_home_img{
+     width: 22px;
+     height: 22px;
+     background-image: url(plaync_btn.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     position: absolute;
+     left: 50px;
+     top: 32px;
+
+ }
+ .CS_img{
+     width: 22px;
+     height: 22px;
+     background-image: url(customer_support.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     position: absolute;
+     left: 230px;
+     top: 35px;
+ }
